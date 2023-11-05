@@ -66,5 +66,5 @@ response = requests.put(
     
 if response.status_code == 200:
     st.write("Data saved successfully!")
- else:
+else:
     st.write("Failed to save data. Please check your GitHub token and repository information.")
