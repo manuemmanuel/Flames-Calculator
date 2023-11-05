@@ -10,7 +10,7 @@ def main():
     st.title("Flames Game")
     
     name = st.text_input("Enter your name").lower().strip()
-    crush = st.text_input("Enter your crush's name").lower().strip()
+    crush = st.text_input("Enter your Crush's name").lower().strip()
     submit_button = st.button("Submit")
 
     if submit_button:
