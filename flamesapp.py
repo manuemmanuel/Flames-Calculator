@@ -22,7 +22,7 @@ def calculate_relationship(name_one, name_two):
     return result
 
 
-st.title("FLAMES Relationship Calculator")
+st.title("FLAMES CALCULATOR")
 
 name_one = st.text_input("Enter Name One:")
 name_two = st.text_input("Enter Name Two:")
@@ -51,8 +51,8 @@ if st.button("Calculate"):
     file_path = "result.txt"
 
   
-   content_bytes = f"Name One: {name_one}\nName Two: {name_two}\nResult: {result}".encode("utf-8")
-   content_base64 = base64.b64encode(content_bytes).decode("utf-8")
+    content_bytes = f"Name One: {name_one}\nName Two: {name_two}\nResult: {result}".encode("utf-8")
+    content_base64 = base64.b64encode(content_bytes).decode("utf-8")
 
 response = requests.put(
     f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_path}",
