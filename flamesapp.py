@@ -29,7 +29,7 @@ if st.button("Calculate"):
     result_code = calculate_relationship(name_one.lower(), name_two.lower())
     if result_code == 'f':
         result = "Friends"
-        st.audio('friends.m4a', format='audio/m4a', start_time=0)
+        st.audio(audio_file_path, format='audio/m4a', start_time=0, when='once')
     elif result_code == 'l':
         result = "Lovers"
     elif result_code == 'a':
