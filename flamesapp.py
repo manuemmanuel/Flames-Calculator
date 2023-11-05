@@ -29,16 +29,21 @@ if st.button("Calculate"):
     result_code = calculate_relationship(name_one.lower(), name_two.lower())
     if result_code == 'f':
         result = "Friends"
-        st.markdown(f'<audio autoplay><source src="{'friends.m4a'}" type="audio/m4a"></audio>', unsafe_allow_html=True)
+        st.audio('friends.m4a')
     elif result_code == 'l':
         result = "Lovers"
+        #st.audio('')
     elif result_code == 'a':
         result = "Affection"
+        #st.audio('')
     elif result_code == 'm':
         result = "Marriage"
+        #st.audio('')
     elif result_code == 'e':
         result = "Enemies"
+        st.audio('enemy.m4a')
     elif result_code == 's':
         result = "Siblings"
+       # st.audio('')
 
     st.write(f"Result: {result}")
