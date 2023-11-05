@@ -1,4 +1,10 @@
 import streamlit as st
+import requests
+
+GITHUB_TOKEN = "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"
+REPO_OWNER = "manuemmanuel"
+REPO_NAME = "Flames-Calculator"
+FILE_PATH = "main.txt"
 
 def main():
     st.title("Flames Game")
@@ -132,11 +138,33 @@ def check_condition(flame):
         return "ENEMY"
     elif flame.lower().strip()=='s':
         return "SIBLINGS"
-
-def file_write(name,crush,output):
-
-    with open("main.txt","a") as file:
-        file.write(f"{name},{crush},{output}\n")
+def file_write(name, crush, output):
+    data = f"{name},{crush},{output}\n"
+    
+    headers = {
+        "Authorization": f"Bearer {GITHUB_TOKEN}"
+    }
+    
+    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/contents/{FILE_PATH}"
+    response = requests.get(url, headers=headers)
+    content = response.json()
+    
+    existing_content = content.get("content", "")
+    new_content = existing_content + data
+    encoded_content = new_content.encode("base64").decode("utf-8")
+    
+    commit_message = "Update main.txt"
+    payload = {
+        "message": commit_message,
+        "content": encoded_content,
+        "sha": content.get("sha")
+    }
+    
+    response = requests.put(url, headers=headers, json=payload)
+    if response.status_code == 200:
+        st.success("Data saved successfully!")
+    else:
+        st.error("Failed to save data.")
 
 if __name__ == '__main__':
     main()
