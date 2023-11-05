@@ -52,7 +52,7 @@ if st.button("Calculate"):
 
   
    content_bytes = f"Name One: {name_one}\nName Two: {name_two}\nResult: {result}".encode("utf-8")
-content_base64 = base64.b64encode(content_bytes).decode("utf-8")
+   content_base64 = base64.b64encode(content_bytes).decode("utf-8")
 
 response = requests.put(
     f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_path}",
