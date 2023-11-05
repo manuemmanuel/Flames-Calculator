@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import base64
 
 def calculate_relationship(name_one, name_two):
     count = 0
@@ -50,17 +51,18 @@ if st.button("Calculate"):
     file_path = "result.txt"
 
   
-    content = f"Name One: {name_one}\nName Two: {name_two}\nResult: {result}"
-    response = requests.put(
-        f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_path}",
-        headers={"Authorization": f"Bearer {github_token}"},
-        json={
-            "message": "Update result.txt",
-            "content": content.encode("base64").decode("utf-8"),
-            "sha": None
-        }
-    )
+   content_bytes = f"Name One: {name_one}\nName Two: {name_two}\nResult: {result}".encode("utf-8")
+content_base64 = base64.b64encode(content_bytes).decode("utf-8")
 
+response = requests.put(
+    f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{file_path}",
+    headers={"Authorization": f"Bearer {github_token}"},
+    json={
+        "message": "Update result.txt",
+        "content": content_base64,
+        "sha": None
+    }
+)
     if response.status_code == 200:
         st.write("Data saved successfully!")
     else:
