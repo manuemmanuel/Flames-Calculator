@@ -18,31 +18,10 @@ reference:devglan.com
 
 
 
+EtwSngZmrbF5hct951g/fa7mC6GmJkK2QXCvqXxmQm/X9965BMJhHv38jFjRYWzRZ80R7LebwLeA0qJuPr3w4Zvgs2z3S6hcD6g8glCZdRMcu1nQDWJ/SInXw9B/WwP7a/LLjY3g8LXxKMSDQwm1hIukByppdOIhGbThWqNDD7dWI7FE8IyioIz30wEfBLrjv52Q6DO+RGddlv1FmSuHhokLgv9ot02lM3qnsdfq4LRHfYUG2+9cwb9+6SR/qXMy
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-GQhQsUvBHG1uWSBAHtdmkl6XP7Ael8e9ANYM8xjFqutii1oD3M+z02dbVHT9SoX2MHhS4hsBLmCpoQZkXp0JdgBpUn0kBMuBIHUtSGEFALorR2nXNOFjeW+mH165VX/k4fsjT144EITPW4pbOr9K3DE6hyF1vZECHQ0qaKDWn4G/Q27qwCtX0wJkfvChtWFL24V2aJlF5GhL+4Vx85cmg1YMymrjUJ6jo4Vm0v+Cno4RY2cySnT+K+uTESOBi6kj
 
 
 
