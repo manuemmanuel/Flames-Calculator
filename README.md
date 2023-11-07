@@ -7,9 +7,6 @@ Click the  link to access the FLAMES game web page and have some fun exploring y
 ## FLAMES:
 FLAMES, an acronym for Friends, Lovers, Affectionate, Marriage, Enemies, and Siblings, is a fun and simple game enjoyed by many for exploring relationships. By writing two names and counting the remaining letters after removing common ones, you determine one of six outcomes: F for friends, L for lovers, A for affection, M for marriage, E for enemies, and S for siblings. However, it's just for fun and shouldn't be taken too seriously. The results are random and are a light-hearted way to spark curiosity and laughter when thinking about different kinds of connections between people.
 
-<img src="https://raw.githubusercontent.com/manuemmanuel/manuemmanuel/output/snake.svg" alt="Snake animation" />
-
-###
 
 reference :  devglan.com 
 
