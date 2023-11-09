@@ -4,7 +4,7 @@ from cowsay import *
 
 
 def main():
-    figlet("FLAMES","fire_font-k")
+    figlet("FLAMES", "fire_font-k")
     key = "y"
     while key == "y":
         name = input("Enter your name ").lower().strip()
@@ -29,7 +29,7 @@ def main():
         key = input("Do you want to check again ? (y/n) ").lower().strip()
 
     print("\nThank you for using the Flames Calculator.")
-    figlet("GOOD BYE !!","graceful")
+    figlet("GOOD BYE !!", "graceful")
 
 
 def list_word(name):
@@ -139,7 +139,7 @@ def file_write(name, crush, output):
         file.write(f"{name},{crush},{output}\n")
 
 
-def figlet(value,fonts):
+def figlet(value, fonts):
     f = Figlet()
     f.setFont(font=fonts)
     print(f.renderText(value))
