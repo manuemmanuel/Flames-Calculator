@@ -25,7 +25,7 @@ def list_word(name):
 
 def find_length(name, crush):
         common_words=[]
-    repeating=[]
+        repeating=[]
     if len(name)>len(crush):
         for i in crush:
             for j in name:
