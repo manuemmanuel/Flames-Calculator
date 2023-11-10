@@ -24,8 +24,8 @@ def list_word(name):
     return name_list
 
 def find_length(name, crush):
-        common_words=[]
-        repeating=[]
+    common_words=[]
+    repeating=[]
     if len(name)>len(crush):
         for i in crush:
             for j in name:
@@ -51,8 +51,9 @@ def find_length(name, crush):
             crush.remove(i)
     length=len(name)+len(crush)
     return length
+
 def flames(value):
-       flame=[]
+    flame=[]
     new_flame=[]
     flam='flames'
     for i in flam:
@@ -83,7 +84,7 @@ def flames(value):
     return flame
 
 def check_condition(flame):
-      if flame.lower().strip()=='f':
+    if flame.lower().strip()=='f':
         return "FRIENDS"
     elif flame.lower().strip()=='l':
         return "LOVERS"
