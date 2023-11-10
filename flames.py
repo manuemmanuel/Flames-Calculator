@@ -1,13 +1,14 @@
-from pyfiglet import Figlet
-from tabulate import tabulate
-from cowsay import get_output_string
+from pyfiglet import *
+from tabulate import *
+from cowsay import *
+
 
 def main():
-    figlet("FLAMES", "block")
+    figlet("FLAMES", "fire_font-k")
     key = "y"
     while key == "y":
-        name = input("Enter your name: ").lower().strip()
-        crush = input("Enter your crush's name: ").lower().strip()
+        name = input("Enter your name ").lower().strip()
+        crush = input("Enter your crush's name ").lower().strip()
         name_list = list_word(name)
         crush_list = list_word(crush)
 
@@ -20,9 +21,9 @@ def main():
         file_write(name.capitalize(), crush.capitalize(), output)
         history = input("Do you want to view your history ? (y/n) ").lower().strip()
         if history == "y":
-            history_list = file_read()
-            if len(history_list) > 0:
-                print_table(history_list)
+            listss = file_read()
+            if len(listss) > 0:
+                print_table(listss)
             else:
                 print("No History To Be Diplayed !!")
         key = input("Do you want to check again ? (y/n) ").lower().strip()
@@ -61,6 +62,10 @@ def find_length(name, crush):
             repeating.append(i)
             common_words.remove(i)
 
+    for i in common_words:
+        name.remove(i)
+        crush.remove(i)
+
     for i in repeating:
         if i in name and i in crush:
             name.remove(i)
@@ -71,16 +76,19 @@ def find_length(name, crush):
 
 
 def flames(value):
-    flame = list("flames")
+    flame = []
     new_flame = []
+
+    flam = "flames"
+    for i in flam:
+        flame.append(i)
 
     while len(flame) > 1:
         if value > len(flame):
             difference = value - len(flame)
-            difference -= 1
 
-            while difference >= len(flame):
-                difference -= len(flame)
+            while difference > len(flame):
+                difference = difference - len(flame)
 
             new_flame = flame[difference:]
             flame.remove(flame[difference - 1])
@@ -90,8 +98,13 @@ def flames(value):
                     new_flame.append(i)
 
             flame = new_flame
+
+        elif value == 0:
+            return ["x"]
+
         elif value == len(flame):
             flame.remove(flame[-1])
+
         else:
             while value < len(flame):
                 new_flame = flame[value:]
@@ -127,25 +140,26 @@ def file_write(name, crush, output):
 
 
 def figlet(value, fonts):
-    f = Figlet(font=fonts)
+    f = Figlet()
+    f.setFont(font=fonts)
     print(f.renderText(value))
 
 
 def file_read():
     with open("main.txt", "r") as file:
         content = file.readlines()
-        history_list = []
+        list = []
         for i in content:
-            term = i.strip().split(",")
-            history_list.append(term)
+            term = i.split(",")
+            list.append(term)
 
-        return history_list
+        return list
 
 
-def print_table(history_list):
+def print_table(list):
     print(
         tabulate(
-            history_list, headers=["Your Name", "Crush's Name", "Result"], tablefmt="pretty"
+            list, headers=["Your Name", "Crush's Name", "Result"], tablefmt="pretty"
         )
     )
 
@@ -172,15 +186,15 @@ def animate(output):
     elif output.lower() == "affection":
         print(
             get_output_string(
-                "octopus",
-                f"Just {output}\nWhat did one octopus say to the other octopus?\n'Want to hold my hand? I've got eight to spare!'\nhehe...I know I'm funny .. Thankss..",
+                f"octopus",
+                f"Just {output}\nWhat did one octopus say to the other octopus?\n'Want to hold my hand? I've got eight to spare!'\nhehe...I know i'm funny .. Thankss..",
             )
         )
 
     elif output.lower() == "enemy":
         print(
             get_output_string(
-                "trex",
+                f"trex",
                 f"Ohh Ohh !! You are\n{output}\nOhh Ohh the misery\nEverybody want to be my Enemy .. \n Spare the Sympathy ..Everybody want  to be my enemy ... yeahhh",
             )
         )
@@ -188,7 +202,7 @@ def animate(output):
         print(
             get_output_string(
                 "beavis",
-                f"You are just \n{output}\n which implies that you are one of the sore losers in this small world ... \nonce again best of luck finding that person",
+                f"You are just \n{output}\n which implies that you are one of the sore loosers in this small world ... \nonce again best of luck finding that person",
             )
         )
 
