@@ -13,7 +13,7 @@ However, it's just for fun and shouldn't be taken too seriously. The results are
 
 ## Screenshots
 
-![App Screenshot](https://ibb.co/bQWZxdy)
+![App Screenshot](Screenshot 2023-11-14 233106.png)
 
 
 ## Usage/Examples
