@@ -28,7 +28,10 @@ A Message left for Someone by Somebody
 ```bash
 VKf+rvMV4dUDBz40ywPqiMZftjE7Z7JrF2xBio9e0zurPY5qiu6ryhnMpfKXAgQXcOHPQcPFlKFWammej710Ev2f3Y9zA410vQV8Q8n0jUrA5poiO6tNs7RrWJONFtsfFcrcFlxoxdyicD0teZYse23zUskCjsxppYD1rwm2v4lCklXiNf+1eswpQKd+sFMyr4FqMnpFt/3cbCBHLDbO+3qQq10OnXLnGTjhX4mU1/6zxtxmAJA94iN3i93L/lvQ
 ```
-
+## Web Project Structure
+- app.py: The main Flask application file.
+- templates/: Contains HTML templates for the user interface.
+- static/: Includes static files such as CSS for styling.
 
 
 
