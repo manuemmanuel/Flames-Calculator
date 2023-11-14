@@ -33,6 +33,26 @@ VKf+rvMV4dUDBz40ywPqiMZftjE7Z7JrF2xBio9e0zurPY5qiu6ryhnMpfKXAgQXcOHPQcPFlKFWamme
 - templates/: Contains HTML templates for the user interface.
 - static/: Includes static files such as CSS for styling.
 
+## Prerequisites
+Python 3.x
+Flask
+
+## Installation
+Clone the repository:
+
+```bash
+git clone https://github.com/manuemmanuel/Flames-Calculator.git
+```
+Navigate to the project directory:
+
+```bash
+cd Flames-Calculator/Web
+```
+Install the required dependencies:
+```bash
+pip install flask
+```
+
 
 
 
