@@ -52,7 +52,12 @@ Install the required dependencies:
 ```bash
 pip install flask
 ```
+Run the Flask application:
 
+```bash
+python app.py
+```
+Open your web browser and navigate to http://localhost:5000 to access the Flames App.
 
 
 
