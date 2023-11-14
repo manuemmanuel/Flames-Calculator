@@ -13,7 +13,7 @@ However, it's just for fun and shouldn't be taken too seriously. The results are
 
 ## Screenshots
 
-<img title="a title" alt="Alt text" src="/images/boo.svg">
+<img title="a title" alt="Alt text" src="Screenshot 2023-11-14 233106.png">
 
 
 ## Usage/Examples
