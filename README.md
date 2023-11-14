@@ -2,6 +2,7 @@
 # Flames Calculator
 
 FLAMES, an acronym for Friends, Lovers, Affectionate, Marriage, Enemies, and Siblings, is a fun and simple game enjoyed by many for exploring relationships. By writing two names and counting the remaining letters after removing common ones, you determine one of six outcomes: 
+<br>
 - F for friends, 
 - L for lovers, 
 - A for affection, 
