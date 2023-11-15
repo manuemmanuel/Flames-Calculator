@@ -2,3 +2,4 @@ streamlit
 pyfiglet
 tabulate
 cowsay
+flask
