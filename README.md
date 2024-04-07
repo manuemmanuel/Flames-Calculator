@@ -20,7 +20,7 @@ However, it's just for fun and shouldn't be taken too seriously. The results are
 
 ## Usage/Examples
 
-https://flames.streamlit.app/
+[Streamlit App](https://flames-calculator.streamlit.app/)
   
 Click the  link to access the FLAMES game web page and have some fun exploring your relationships!
 
